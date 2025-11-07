@@ -119,31 +119,8 @@ def fetch_bars(symbol,
     df = df.drop_duplicates("datetime").sort_values("datetime").set_index("datetime")
     return df
 
-# if __name__ == "__main__":
-#     print("🔑 Test du refresh access token...")
-#     try:
-#         access_token, new_refresh, expires_in = refresh_access_token()
-#         print("✅ Access token obtenu :", access_token[:40] + "...")
-#         print("⌛ Expiration dans :", expires_in, "secondes")
-#         print("🔄 Nouveau refresh token :", new_refresh[:40] + "...")
-        
-#     except Exception as e:
-#         print("❌ Erreur lors du refresh :", e)
 
 
-#===========telecharger les donnees==========#
-# start_date = (datetime.utcnow() - timedelta(days=DEFAULT_LOOKBACK_DAYS)).replace(tzinfo=timezone.utc)
-# end_date = datetime.utcnow().replace(tzinfo=timezone.utc)
-# print(f"Téléchargement des barres pour {DEFAULT_SYMBOL} du {start_date} au {end_date}...")
-# df_bars = fetch_bars(
-#         symbol=DEFAULT_SYMBOL,
-#         access_token=access_token,
-#         unit=DEFAULT_UNIT,
-#         interval=DEFAULT_INTERVAL,
-#         start_utc=start_date,
-#         end_utc=end_date,
-#         chunk_size=CHUNK_SIZE
-#     )
 
 
 
