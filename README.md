@@ -1,6 +1,6 @@
 # Hidden Markov Model for VIX index prediction trading
 
-![Texte alternatif](Projet_HMM/plotting/Screenshot.png)
+![Texte alternatif](Results_graphs/Screenshot.png)
 
 ## Functionnment of the model
 
