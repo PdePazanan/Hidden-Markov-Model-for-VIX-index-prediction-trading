@@ -11,7 +11,8 @@ The model is defined in the file hmm_model.py and for more precision the mathema
 
 
 - The second model is obtained thanks to a LSTM with a MLP that had been trained with market features and the probability from the Hidden Markov Model, The folder LSTM contain the necessary to train the model, we trained the model for the VIX with a 2-hours timeframe.
-The graphs results are in the folder results_graphs. I used for one the VVIX who is an index that mesure the expected volatility of the VIX index, it is calculated using the same methodology as the VIX, but instead of relying on S&P 500 options, it uses prices from VIX options. So we have 2 models, one using the VVIX as a feature for more precision, our model try to detect patterns and correlation between VVIX and VIX, it is also combined with the HMM. The other model is just the LSTM combined with the HMM. Bellow a diagram that explained the different layers 👇 
+- 
+The graphs results are in the folder results_graphs. I used for one model the VVIX who is an index that mesure the expected volatility of the VIX index, it is calculated using the same methodology as the VIX, but instead of relying on S&P 500 options, it uses prices from VIX options. So we have 2 models, one using the VVIX as a feature for more precision, our model try to detect patterns and correlation between VVIX and VIX, it is also combined with the HMM. The other model is just the LSTM combined with the HMM. Bellow a diagram that explained the different layers 👇 
 
 ![Texte alternatif](Results_graphs/LSTM.png)
 
