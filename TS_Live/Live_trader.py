@@ -1,3 +1,5 @@
+### this file is a live trading algorithm to link with a TradeStation account, you need to fill out your API informations on the Execution_API file ###
+### I have made other files for other broker and trading platform, you can contact me if you want ###
 
 import time
 import requests
