@@ -2,7 +2,7 @@
 
 ![Texte alternatif](Results_graphs/daily_trading_5min_timeframe.png)
 
-## Functionnment of the model
+## Operation of the model
 Markov chains are significantly used today in the market to benefit investors and traders. I developed here a Hidden Markov Model that would help us identify different hidden states in the market and use it to develop a trading strategy.
 The model estimates three hidden states : normal trading, top formation, and bottom formation using market observations like returns, price levels, volatility, momentum... It tracks shifting market structures while being sensitive to different volatility and regime stability by dynamically updating state probabilities using Bayesian inference and adaptive transition matrices to calculate top, normal and bottom probability. 
 
