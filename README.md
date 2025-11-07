@@ -33,7 +33,11 @@ The best model trained with LSTM is in the folder LSTM, and give the signals com
 I'm working to develop a code to integrate a Live trading strategy with Vantage market were the VIX as a CFD is available, and to integrate the fees of swaps in our backtest.
 
 ### Data
-You can also find intraday data for the VIX index and VVIX index since 2014, in 5 min timeframe or 2 hours timeframe. It is impossible to find these data for free on the internet. You're welcome
+You can also find intraday data for the VIX index and VVIX index since 2011, in 5 min timeframe or 2 hours timeframe. It is impossible to find these data for free on the internet. You're welcome
+
+-
+-
+-
 
 If you have suggestion or criticism i will be happy to here them. I did this for free, if you want to support me you can do it here 👇👇 
 
