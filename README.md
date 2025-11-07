@@ -17,7 +17,7 @@ The graphs results are in the folder results_graphs. I used for one the VVIX who
 
 Our model is learning with a lot of accuracy because we focus just on the VIX market and this index is oscillating between $0 and $100, that's why the model is able to detect patterns, This forward-looking approach enables us to identify regime shifts before they are reflected in price movements, giving our trades an informational advantage.
 
-## Live application for future as a short term strategy
+## Live application for future as a short-term trading strategy
 For a short term strategy, the VIX index is available in Future in TradeStation, the important folder is TS_Live. The model is defined in the file hmm_model and the live algorithm is Live_trader.py.
 To launch this live algorithm you need to complete the Execution_API with your API informations :
 
@@ -27,7 +27,7 @@ The other parameters are filled for the VIX index in 5 min data.
 
 Since the VIX index is not directy tradable, we will trade the future of the current month, that's why our strategy is based on 5 minutes timeframe because we don't want our trades to last too long. Even though the results were better using a bigger timeframe and using a long term strategy, but in reality with Future we will need to pay rollover fees and we need to sell the contract at the end of the month.
 
-## Live application for long term strategy
+## Live application for medium-term trading strategy
 
 Since the long term results were much better, we had better profits and less drawdowns, with out of sample data we can have an incredible 70% annual return by putting a slippage of 0.1% for every trade taken, this performance will be a little lower if the swaps for the DFC VIX are high. We can trade the VIX index with CFDs, it's not a Future contract so there is no expiry date, but there is still fees for swaps every night. Vantage market propose the VIX index as a CFD.
 The best model trained with LSTM is in the folder LSTM, and give the signals combined with the HMM.
