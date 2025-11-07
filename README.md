@@ -11,6 +11,8 @@ The model is defined in the file hmm_model.py and for more precision the mathema
 
 The second model is a LSTM that had been trained with market features and the probability from the Hidden Markov Model, The folder LSTM contain the necessary to train the model.
 The graphs results are in the folder results_graphs. I used for one the VVIX who is an index that mesure the expected volatility of the VIX index, it is calculated using the same methodology as the VIX, but instead of relying on S&P 500 options, it uses prices from VIX options. So we have 2 models, one using the VVIX as a feature for more precision, our model try to detect patterns and correlation between VVIX and VIX, it is also combined with the HMM. The other model is just the LSTM combined with the HMM.
+![Texte alternatif](Results_graphs/LSTM.png)
+
 
 ## Live application for future as a short term strategy
 For a short term strategy, the VIX index is available in Future in TradeStation, the important folder is TS_Live. The model is defined in the file hmm_model and the live algorithm is Live_trader.py.
