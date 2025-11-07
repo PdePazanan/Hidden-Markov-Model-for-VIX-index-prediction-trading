@@ -29,4 +29,5 @@ I'm working to develop a code to integrate a Live trading strategy with Vantage 
 If you have suggestion or criticism i will be happy to here them. I did this for free, if you want to support me you can do it here 👇👇 
 
 BTC wallet adress (BTC network) : bc1q5hpk5m03wu76e3psddg7my6pglkpxjry276ymx
+
 USDC wallet adress (Base network) : 0x31A4733Cf72fc998101f011fA289aA4Dd38Ba509
