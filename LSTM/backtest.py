@@ -30,38 +30,6 @@ def download_ohlcv_by_dates(symbol: str, timeframe: str, start_date: str, end_da
     return df
 
 
-# def prepare_hmm_df(df: pd.DataFrame, hmm: HiddenMarkovModelIndicator):
-#     df_ind = hmm.run(df)
-    
-#     # s'assurer que l'index est DatetimeIndex
-#     if not isinstance(df_ind.index, pd.DatetimeIndex):
-#         df_ind.index = pd.to_datetime(df_ind.index, errors='coerce')
-    
-#     # width_days pour plotting
-#     med_step = df_ind.index.to_series().diff().dropna().median()
-#     width_days = (med_step / pd.Timedelta(days=1)) * 0.9 if not pd.isna(med_step) else 0.02
-    
-#     # colonnes pour plotting
-#     df_ind['top_prob_value'] = df_ind.get('prob_top', 0.0) * 100
-#     df_ind['bottom_prob_value'] = df_ind.get('prob_bottom', 0.0) * 100
-    
-#     dominant_is_top = df_ind['top_prob_value'] >= df_ind['bottom_prob_value']
-#     df_ind['red_height'] = df_ind['top_prob_value'].where(dominant_is_top, 0.0)
-#     df_ind['green_height'] = df_ind['bottom_prob_value'].where(~dominant_is_top, 0.0)
-    
-#     # outlier_line fallback
-#     if 'outlier_line' not in df_ind.columns or df_ind['outlier_line'].isna().all():
-#         df_ind['signal_strength'] = df_ind[['top_prob_value', 'bottom_prob_value']].max(axis=1)
-#         baseline = df_ind['signal_strength'].rolling(hmm.outlier_smoothing).mean()
-#         signal_std = df_ind['signal_strength'].rolling(hmm.outlier_smoothing).std()
-#         df_ind['outlier_line'] = (baseline + signal_std * hmm.outlier_sensitivity).ewm(span=10).mean()
-    
-#     df_ind['buy_signal']  = df_ind['bottom_prob_value'] > df_ind['outlier_line']
-#     df_ind['sell_signal'] = df_ind['top_prob_value']    > df_ind['outlier_line']
-
-    
-#     return df_ind, width_days
-
 def prepare_hmm_df(df: pd.DataFrame, hmm: HiddenMarkovModelIndicator):
     df_ind = hmm.run(df)
     
