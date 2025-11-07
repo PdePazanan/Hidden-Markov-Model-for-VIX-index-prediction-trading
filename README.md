@@ -15,6 +15,7 @@ The graphs results are in the folder results_graphs. I used for one the VVIX who
 
 ![Texte alternatif](Results_graphs/LSTM.png)
 
+Our model is learning with a lot of accuracy because we focus just on the VIX market and this index is oscillating between $0 and $100, that's why the model is able to detect patterns, This forward-looking approach enables us to identify regime shifts before they are reflected in price movements, giving our trades an informational advantage.
 
 ## Live application for future as a short term strategy
 For a short term strategy, the VIX index is available in Future in TradeStation, the important folder is TS_Live. The model is defined in the file hmm_model and the live algorithm is Live_trader.py.
