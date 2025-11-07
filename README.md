@@ -29,4 +29,5 @@ The folder Tradestation is important and explain the backtest of the different t
 
 
 If you have suggestion or criticism i will be happy to here them. I did this for free, if you want to support me you can do it here 👇👇 
+
 BTC wallet adress (BTC network) : bc1q5hpk5m03wu76e3psddg7my6pglkpxjry276ymx
