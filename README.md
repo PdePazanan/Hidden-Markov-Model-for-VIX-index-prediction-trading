@@ -3,8 +3,11 @@
 ![Texte alternatif](Results_graphs/daily_trading_5min_timeframe.png)
 
 ## Functionnment of the model
+Markov chains are significantly used today in the market to benefit investors and traders. I developed here a Hidden Markov Model that would help us identify different hidden states in the market and use it to develop a trading strategy.
+The model estimates three hidden states : normal trading, top formation, and bottom formation using market observations like returns, price levels, volatility, momentum... It tracks shifting market structures while being sensitive to different volatility and regime stability by dynamically updating state probabilities using Bayesian inference and adaptive transition matrices to calculate top, normal and bottom probability. 
 
-The model is using euristic emission to calculate hidden states in the VIX market. The 3 hidden states are top, normal, bottom. Our model research the 2 states top (where the market is overbought) and bottom (where the market is oversell). It is based on the asumption that the VIX index is stationnary and the model is seeking to predict potential reversal point, we use different features from the market and Bayesian inference to calculate the top, normal and bottom probability . The model is defined in the file hmm_model.py and the mathematics of the model are explained in the file hmm.pdf
+Our model research the 2 states top (where the market is overbought) and bottom (where the market is oversell). It is based on the asumption that the VIX index is stationnary and the model is seeking to predict potential reversal point.
+The model is defined in the file hmm_model.py and for more precision the mathematics of the model are explained in the file hmm.pdf
 
 The second model is a LSTM that had been trained with market features and the probability from the Hidden Markov Model, The folder LSTM contain the necessary to train the model.
 The graphs results are in the folder results_graphs. I used for one the VVIX who is an index that mesure the expected volatility of the VIX index, it is calculated using the same methodology as the VIX, but instead of relying on S&P 500 options, it uses prices from VIX options. So we have 2 models, one using the VVIX as a feature for more precision, our model try to detect patterns and correlation between VVIX and VIX, it is also combined with the HMM. The other model is just the LSTM combined with the HMM.
