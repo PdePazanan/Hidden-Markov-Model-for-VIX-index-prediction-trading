@@ -1,6 +1,6 @@
 # Hidden Markov Model for VIX index prediction trading
 
-![Texte alternatif](Results_graphs/Screenshot.png)
+![Texte alternatif](Results_graphs/daily_trading_5min_timeframe.png)
 
 ## Functionnment of the model
 
