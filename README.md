@@ -30,7 +30,7 @@ Since the VIX index is not directy tradable, we will trade the future of the cur
 
 ## Live application for medium-term trading strategy
 
-Since the long term results were much better, we had better profits and less drawdowns, with out of sample data we can have an incredible 70% annual return by putting a slippage of 0.1% for every trade taken, this performance will be a little lower if the swaps for the DFC VIX are high. We can trade the VIX index with CFDs, it's not a Future contract so there is no expiry date, but there is still fees for swaps every night. Vantage market propose the VIX index as a CFD.
+Since the long term results were much better, we had better profits and less drawdowns, with out of sample data we can have an incredible 70% annual return by putting a slippage of 0.1% for every trade taken, this performance will be a little lower if the swaps for the DFC VIX are high, the backtest was set with a timeframe of 2h. We can trade the VIX index with CFDs, it's not a Future contract so there is no expiry date, but there is still fees for swaps every night. Vantage market propose the VIX index as a CFD.
 The best model trained with LSTM is in the folder LSTM, and give the signals combined with the HMM.
 I'm working to develop a code to integrate a Live trading strategy with Vantage market were the VIX as a CFD is available, and to integrate the fees of swaps in our backtest.
 
