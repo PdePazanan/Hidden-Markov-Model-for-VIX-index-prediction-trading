@@ -30,9 +30,7 @@ access_token, _, expires_in = refresh_access_token(
 print(f"Token OK (expires in {expires_in}s)")
 
 
-# ----- Charger les données de marché -----
-# start_date = (datetime.utcnow() - timedelta(days=DEFAULT_LOOKBACK_DAYS)).replace(tzinfo=timezone.utc)
-# end_date = datetime.utcnow().replace(tzinfo=timezone.utc)
+# ----- load market data -----
 
 start_date = datetime.now(UTC) - timedelta(days=DEFAULT_LOOKBACK_DAYS)
 end_date   = datetime.now(UTC)
@@ -69,7 +67,7 @@ vvix_df = fetch_bars(
 
 # --- Synchronisation temporelle propre ---
 
-# ==== Pour le VIX ====
+# ==== for the VIX ====
 df_raw = df_raw.copy()
 
 if isinstance(df_raw.index, pd.DatetimeIndex):
@@ -87,7 +85,7 @@ df_raw = df_raw.drop_duplicates(subset=["datetime"])
 df_raw = df_raw.sort_values("datetime")
 
 
-# ==== Pour le VVIX ====
+# ==== for the VVIX ====
 vvix_df = vvix_df.copy()
 
 if isinstance(vvix_df.index, pd.DatetimeIndex):
@@ -104,7 +102,7 @@ vvix_df["datetime"] = pd.to_datetime(vvix_df["datetime"])
 vvix_df = vvix_df.drop_duplicates(subset=["datetime"])
 vvix_df = vvix_df.sort_values("datetime")
 
-# 🔹 Merge propre avec tolérance (VVIX aligné au plus proche)
+# 🔹 Merge propre avec tolérance
 df_merged = pd.merge_asof(
     df_raw,
     vvix_df[["datetime", "close"]].rename(columns={"close": "vvix_close"}),
@@ -121,7 +119,7 @@ df_merged["vvix_trend"] = df_merged["vvix_close"].diff()
 df_merged["corr_vix_vvix"] = df_merged["close"].rolling(30).corr(df_merged["vvix_close"])
 df_merged.dropna(inplace=True)
 
-# === Split cohérent ===
+# === Split data for train/valid/test ===
 train_end = int(len(df_merged) * 0.5)
 valid_end = int(len(df_merged) * 0.7)
 
