@@ -41,8 +41,4 @@ To run the codes, you need a TradeStation account with an API. If you don't have
 -
 -
 
-If you have suggestion or criticism i will be happy to here them. I did this for free, if you want to support me you can do it here 👇👇 
 
-BTC wallet adress (BTC network) : bc1q5hpk5m03wu76e3psddg7my6pglkpxjry276ymx
-
-USDC wallet adress (Base network) : 0x31A4733Cf72fc998101f011fA289aA4Dd38Ba509
