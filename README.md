@@ -18,6 +18,11 @@ The graphs results are in the folder results_graphs. I used for one model the VV
 
 Our model is learning with a lot of accuracy because we focus just on the VIX market and this index is oscillating between $0 and $100, that's why the model is able to detect patterns, This forward-looking approach enables us to identify regime shifts before they are reflected in price movements, giving our trades an informational advantage.
 
+# Variational Bayesian Inference
+
+To determine the parameters, the classical HMM is not efficient enough for low timeframe, it can do overfitting. That's why we will use variational bayesian inference 
+
+
 ## Live application for future as a short-term trading strategy
 For a short term strategy, the VIX index is available in Future in TradeStation, the important folder is TS_Live. The model is defined in the file hmm_model and the live algorithm is Live_trader.py.
 To launch this live algorithm you need to complete the Execution_API with your API informations :
