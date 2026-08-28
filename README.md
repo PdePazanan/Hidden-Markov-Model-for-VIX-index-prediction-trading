@@ -1,6 +1,7 @@
 # Hidden Markov Model for VIX index prediction trading
 
-![Texte alternatif](Results_graphs/daily_trading_5min_timeframe.png)
+![Texte alternatif](Results_graphs/Training_valid_test_using_VVIX.png)
+<!--daily_trading_5min_timeframe.png-->
 
 ## Operation of the model
 Markov chains are significantly used today in the market to benefit investors and traders. I developed here a Hidden Markov Model that would help us identify different hidden states in the market and use it to develop a trading strategy.
