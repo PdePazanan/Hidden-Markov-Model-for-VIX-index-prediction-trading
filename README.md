@@ -34,6 +34,9 @@ The other parameters are filled for the VIX index in 5 min data.
 
 Since the VIX index is not directy tradable, we will trade the future of the current month, that's why our strategy is based on 5 minutes timeframe because we don't want our trades to last too long. Even though the results were better using a bigger timeframe and using a long term strategy, but in reality with Future we will need to pay rollover fees and we need to sell the contract at the end of the month.
 
+![Texte alternatif](Results_graphs/daily_trading_5min_timeframe.png)
+
+
 ## Live application for medium-term trading strategy
 
 Since the long term results were much better, we had better profits and less drawdowns, with out of sample data we can have an incredible 70% annual return by putting a slippage of 0.1% for every trade taken, this performance will be a little lower if the swaps for the DFC VIX are high, the backtest was set with a timeframe of 2h. We can trade the VIX index with CFDs, it's not a Future contract so there is no expiry date, but there is still fees for swaps every night. Vantage market propose the VIX index as a CFD.
